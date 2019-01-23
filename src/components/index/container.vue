@@ -22,7 +22,7 @@
           <div class="cbody">
             <div class="title" :title="item.address">{{item.address}}</div>
             <div class="sub-title" :title="item.subTitle">{{item.subTitle}}</div>
-
+            <!-- if else 判断 rentNum 的值，进行相应显示的样式-->
             <div class="price-info"  v-if="item.rentNum">
               <span class="current-price-wrapper" >
                  <span class="current-price-wrapper">
@@ -63,7 +63,7 @@ export default {
       },
       {
         image:
-          "//p0.meituan.net/wedding/4a12d0fa0100807e6135f52f9e48c2de307111.jpg@240w_180h_1e_1c_1l|watermark=1&&r=2&p=9&x=2&y=2&relative=1&o=20|736w_416h_1e_1c",
+        "//p1.meituan.net/deal/88b6436b1ece19805e69849b33b7128c33093.jpg@736w_416h_1e_1c",
         title: "COSTA COFFEE（东方新天地店）",
         address: "东方新天地",
         subTitle: "玫瑰黑巧茶拿铁1份",

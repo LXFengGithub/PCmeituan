@@ -23,8 +23,8 @@
 
 <script>
 import MyMenu from "@/components/index/menu";
-import MLife from "./life";
-import MContainer from "./container";
+import MLife from "@/components/index/life";
+import MContainer from "@/components/index/container";
 
 export default {
   data: () => ({

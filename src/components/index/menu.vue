@@ -1,9 +1,8 @@
 <template>
   <div class="m-menu">
-    <div class="nav">
-      <dl>
+      <dl class="nav" @mouseleave="menuLeave">
         <dt>全部分类</dt>
-        <dd v-for="(item, index) in menuList" :key="index" @mousemove="mouseMove(item)" @mouseout="mouseOut">
+        <dd v-for="(item, index) in menuList" :key="index" @mouseenter="menuEnter(item)">
           <i :class="item.type"></i> 
           {{item.title}} 
           <span class="arrow"></span>
@@ -18,7 +17,6 @@
           <span v-for="(v, i) in item.children" :key="(v + '_' + i)">{{v}}</span>
         </template>
       </div>
-    </div>
   </div>
 </template>
 
@@ -32,7 +30,7 @@ export default {
       "title": "美食",
         "type": "food",
         "children": [{
-            "title": "美食",
+            "title": "美食1",
             "children": ["日本菜", "甜点饮品", "火锅自助餐", "小吃快餐", "日韩料理", "西餐", "聚餐宴请"]
         }]
     },
@@ -40,7 +38,7 @@ export default {
       "title": "美食",
         "type": "food",
         "children": [{
-            "title": "美食",
+            "title": "美食2",
             "children": ["日本菜", "甜点饮品", "火锅自助餐", "小吃快餐", "日韩料理", "西餐", "聚餐宴请"]
         }]
     },
@@ -48,7 +46,7 @@ export default {
       "title": "美食",
         "type": "food",
         "children": [{
-            "title": "美食",
+            "title": "美食3",
             "children": ["日本菜", "甜点饮品", "火锅自助餐", "小吃快餐", "日韩料理", "西餐", "聚餐宴请"]
         }]
     },
@@ -56,7 +54,7 @@ export default {
       "title": "美食",
         "type": "food",
         "children": [{
-            "title": "美食",
+            "title": "美食4",
             "children": ["日本菜", "甜点饮品", "火锅自助餐", "小吃快餐", "日韩料理", "西餐", "聚餐宴请"]
         }]
     },
@@ -64,7 +62,7 @@ export default {
       "title": "美食",
         "type": "food",
         "children": [{
-            "title": "美食",
+            "title": "美食5",
             "children": ["日本菜", "甜点饮品", "火锅自助餐", "小吃快餐", "日韩料理", "西餐", "聚餐宴请"]
         }]
     }]
@@ -72,11 +70,11 @@ export default {
   methods: {
     // musemove mouseout  冒泡  mouseenter mouseleven   不冒泡
     // 处理二级导航 显示/隐藏
-    mouseMove (item) {
+    menuEnter (item) {
       // console.log(item)
       this.curDetail = item
     },
-    mouseOut () {
+    menuLeave () {
       let self = this
       this.timer = setTimeout(() => {
         self.curDetail = null
@@ -91,7 +89,3 @@ export default {
   }
 };
 </script>
-
-<style lang="scss">
-
-</style>

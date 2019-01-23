@@ -11,6 +11,18 @@ import '@/assets/css/main'
 Vue.use(ElementUI)
 Vue.config.productionTip = false
 
+
+/* 自定义指令 钩子函数 bind，inserted 是用的最多的*/
+Vue.directive('documentClick', { /* 点击该 dom元素，以外的位置就转换状态为false */
+  bind(el, binding, vnode ) { /* 进入就会触发 */
+    document.addEventListener('click', binding.value, false)
+    // console.log('--------bind',el, binding, vnode)
+  },
+})
+
+
+
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

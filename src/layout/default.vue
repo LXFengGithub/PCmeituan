@@ -34,6 +34,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import '@/assets/css/public/layout.scss'
-
+@import '@/assets/css/public/layout'
 </style>
