@@ -48,6 +48,30 @@ export default {
         firstChar: "B"
       },
       {
+        id: 952,
+        name: "博山",
+        pinyin: "boshan",
+        acronym: "boshan",
+        rank: "F",
+        firstChar: "B"
+      },
+      {
+        id: 852,
+        name: "博兴",
+        pinyin: "boxing",
+        acronym: "boxing",
+        rank: "F",
+        firstChar: "B"
+      },
+      {
+        id: 233,
+        name: "滨州",
+        pinyin: "binzhou",
+        acronym: "bz",
+        rank: "D",
+        firstChar: "B"
+      },
+      {
         id: 527,
         name: "昌邑",
         pinyin: "changyi",
@@ -56,11 +80,99 @@ export default {
         firstChar: "C"
       },
       {
+        id: 1201,
+        name: "成武县",
+        pinyin: "chengwuxian",
+        acronym: "chengwuxian",
+        rank: "F",
+        firstChar: "C"
+      },
+      {
+        id: 1157,
+        name: "长清区",
+        pinyin: "changqingqu",
+        acronym: "changqingqu",
+        rank: "F",
+        firstChar: "C"
+      },
+      {
+        id: 883,
+        name: "曹县",
+        pinyin: "caoxian",
+        acronym: "caoxian",
+        rank: "F",
+        firstChar: "C"
+      },
+      {
+        id: 877,
+        name: "茌平",
+        pinyin: "chiping",
+        acronym: "chiping",
+        rank: "F",
+        firstChar: "C"
+      },
+      {
+        id: 737,
+        name: "昌乐",
+        pinyin: "changlecl",
+        acronym: "changlecl",
+        rank: "F",
+        firstChar: "C"
+      },
+      {
         id: 370,
         name: "定西",
         pinyin: "dingxi",
         acronym: "dx",
         rank: "E",
+        firstChar: "D"
+      },
+      {
+        id: 434,
+        name: "敦煌",
+        pinyin: "dunhuang",
+        acronym: "dunhuang",
+        rank: "Z",
+        firstChar: "D"
+      },
+      {
+        id: 223,
+        name: "东营",
+        pinyin: "dongying",
+        acronym: "dy",
+        rank: "D",
+        firstChar: "D"
+      },
+      {
+        id: 231,
+        name: "德州",
+        pinyin: "dezhou",
+        acronym: "dz",
+        rank: "D",
+        firstChar: "D"
+      },
+      {
+        id: 738,
+        name: "东平",
+        pinyin: "dongping",
+        acronym: "dongping",
+        rank: "F",
+        firstChar: "D"
+      },
+      {
+        id: 1203,
+        name: "东明县",
+        pinyin: "dongmingxian",
+        acronym: "dongmingxian",
+        rank: "F",
+        firstChar: "D"
+      },
+      {
+        id: 1204,
+        name: "定陶区",
+        pinyin: "dingtaoqu",
+        acronym: "dingtaoqu",
+        rank: "F",
         firstChar: "D"
       },
       {
@@ -79,7 +191,14 @@ export default {
         rank: "F",
         firstChar: "G"
       },
-
+      {
+        id: 856,
+        name: "华亭",
+        pinyin: "huating",
+        acronym: "huating",
+        rank: "F",
+        firstChar: "H"
+      },
       {
         id: 362,
         name: "金昌",
@@ -88,7 +207,135 @@ export default {
         rank: "F",
         firstChar: "J"
       },
+      {
+        id: 1227,
+        name: "康县",
+        pinyin: "kangxian",
+        acronym: "kangxian",
+        rank: "F",
+        firstChar: "K"
+      },
+      {
+        id: 371,
+        name: "陇南",
+        pinyin: "longnan",
+        acronym: "ln",
+        rank: "Z",
+        firstChar: "L"
+      },
+      {
+        id: 372,
+        name: "临夏",
+        pinyin: "linxia",
+        acronym: "linxia",
+        rank: "F",
+        firstChar: "L"
+      },
+      {
+        id: 846,
+        name: "牟平",
+        pinyin: "muping",
+        acronym: "muping",
+        rank: "F",
+        firstChar: "M"
+      },
+      {
+        id: 944,
+        name: "蒙阴",
+        pinyin: "mengyin",
+        acronym: "mengyin",
+        rank: "F",
+        firstChar: "M"
+      },
+      {
+        id: 779,
+        name: "宁阳",
+        pinyin: "ningyang",
+        acronym: "ningyang",
+        rank: "F",
+        firstChar: "N"
+      },
+      {
+        id: 820,
+        name: "宁津",
+        pinyin: "ningjinnj",
+        acronym: "ningjinnj",
+        rank: "F",
+        firstChar: "N"
+      },
 
+      {
+        id: 367,
+        name: "平凉",
+        pinyin: "pingliang",
+        acronym: "pl",
+        rank: "E",
+        firstChar: "P"
+      },
+      {
+        id: 369,
+        name: "庆阳",
+        pinyin: "qingyang",
+        acronym: "qingyang",
+        rank: "E",
+        firstChar: "Q"
+      },
+      {
+        id: 228,
+        name: "日照",
+        pinyin: "rizhao",
+        acronym: "rizhao",
+        rank: "D",
+        firstChar: "R"
+      },
+      {
+        id: 495,
+        name: "寿光",
+        pinyin: "shouguang",
+        acronym: "shouguang",
+        rank: "E",
+        firstChar: "S"
+      },
+      {
+        id: 549,
+        name: "滕州",
+        pinyin: "tengzhou",
+        acronym: "tengzhou",
+        rank: "E",
+        firstChar: "T"
+      },
+      {
+        id: 897,
+        name: "微山",
+        pinyin: "weishan",
+        acronym: "weishan",
+        rank: "F",
+        firstChar: "W"
+      },
+      {
+        id: 523,
+        name: "新泰",
+        pinyin: "xintai",
+        acronym: "xintai",
+        rank: "E",
+        firstChar: "X"
+      },
+      {
+        id: 608,
+        name: "禹城",
+        pinyin: "yucheng",
+        acronym: "yucheng",
+        rank: "F",
+        firstChar: "Y"
+      },
+      {
+        id: 834,
+        name: "邹城",
+        pinyin: "zoucheng",
+        acronym: "zoucheng",
+        rank: "E",
+        firstChar: "Z"
+      },
       {
         id: 364,
         name: "天水",
@@ -113,14 +360,7 @@ export default {
         rank: "E",
         firstChar: "Z"
       },
-      {
-        id: 367,
-        name: "平凉",
-        pinyin: "pingliang",
-        acronym: "pl",
-        rank: "E",
-        firstChar: "P"
-      },
+
       {
         id: 368,
         name: "酒泉",
@@ -129,31 +369,7 @@ export default {
         rank: "E",
         firstChar: "J"
       },
-      {
-        id: 369,
-        name: "庆阳",
-        pinyin: "qingyang",
-        acronym: "qingyang",
-        rank: "E",
-        firstChar: "Q"
-      },
 
-      {
-        id: 371,
-        name: "陇南",
-        pinyin: "longnan",
-        acronym: "ln",
-        rank: "Z",
-        firstChar: "L"
-      },
-      {
-        id: 372,
-        name: "临夏",
-        pinyin: "linxia",
-        acronym: "linxia",
-        rank: "F",
-        firstChar: "L"
-      },
       {
         id: 373,
         name: "甘南",
@@ -170,22 +386,7 @@ export default {
         rank: "F",
         firstChar: "J"
       },
-      {
-        id: 434,
-        name: "敦煌",
-        pinyin: "dunhuang",
-        acronym: "dunhuang",
-        rank: "Z",
-        firstChar: "D"
-      },
-      {
-        id: 856,
-        name: "华亭",
-        pinyin: "huating",
-        acronym: "huating",
-        rank: "F",
-        firstChar: "H"
-      },
+
       {
         id: 1169,
         name: "永登县",
@@ -202,14 +403,7 @@ export default {
         rank: "F",
         firstChar: "H"
       },
-      {
-        id: 1227,
-        name: "康县",
-        pinyin: "kangxian",
-        acronym: "kangxian",
-        rank: "F",
-        firstChar: "K"
-      },
+
       {
         id: 1228,
         name: "山丹县",
@@ -258,14 +452,7 @@ export default {
         rank: "D",
         firstChar: "Z"
       },
-      {
-        id: 223,
-        name: "东营",
-        pinyin: "dongying",
-        acronym: "dy",
-        rank: "D",
-        firstChar: "D"
-      },
+
       {
         id: 224,
         name: "潍坊",
@@ -298,14 +485,7 @@ export default {
         rank: "C",
         firstChar: "W"
       },
-      {
-        id: 228,
-        name: "日照",
-        pinyin: "rizhao",
-        acronym: "rizhao",
-        rank: "D",
-        firstChar: "R"
-      },
+
       {
         id: 229,
         name: "莱芜",
@@ -322,14 +502,7 @@ export default {
         rank: "C",
         firstChar: "L"
       },
-      {
-        id: 231,
-        name: "德州",
-        pinyin: "dezhou",
-        acronym: "dz",
-        rank: "D",
-        firstChar: "D"
-      },
+
       {
         id: 232,
         name: "聊城",
@@ -338,14 +511,7 @@ export default {
         rank: "D",
         firstChar: "L"
       },
-      {
-        id: 233,
-        name: "滨州",
-        pinyin: "binzhou",
-        acronym: "bz",
-        rank: "D",
-        firstChar: "B"
-      },
+
       {
         id: 234,
         name: "菏泽",
@@ -378,14 +544,7 @@ export default {
         rank: "E",
         firstChar: "L"
       },
-      {
-        id: 495,
-        name: "寿光",
-        pinyin: "shouguang",
-        acronym: "shouguang",
-        rank: "E",
-        firstChar: "S"
-      },
+
       {
         id: 496,
         name: "青州",
@@ -426,14 +585,7 @@ export default {
         rank: "F",
         firstChar: "Z"
       },
-      {
-        id: 523,
-        name: "新泰",
-        pinyin: "xintai",
-        acronym: "xintai",
-        rank: "E",
-        firstChar: "X"
-      },
+
       {
         id: 526,
         name: "诸城",
@@ -460,14 +612,6 @@ export default {
         firstChar: "L"
       },
 
-      {
-        id: 549,
-        name: "滕州",
-        pinyin: "tengzhou",
-        acronym: "tengzhou",
-        rank: "E",
-        firstChar: "T"
-      },
       {
         id: 561,
         name: "莱阳",
@@ -524,14 +668,7 @@ export default {
         rank: "E",
         firstChar: "G"
       },
-      {
-        id: 608,
-        name: "禹城",
-        pinyin: "yucheng",
-        acronym: "yucheng",
-        rank: "F",
-        firstChar: "Y"
-      },
+
       {
         id: 611,
         name: "乐陵",
@@ -572,22 +709,7 @@ export default {
         rank: "F",
         firstChar: "X"
       },
-      {
-        id: 737,
-        name: "昌乐",
-        pinyin: "changlecl",
-        acronym: "changlecl",
-        rank: "F",
-        firstChar: "C"
-      },
-      {
-        id: 738,
-        name: "东平",
-        pinyin: "dongping",
-        acronym: "dongping",
-        rank: "F",
-        firstChar: "D"
-      },
+
       {
         id: 739,
         name: "临朐",
@@ -604,22 +726,7 @@ export default {
         rank: "F",
         firstChar: "P"
       },
-      {
-        id: 779,
-        name: "宁阳",
-        pinyin: "ningyang",
-        acronym: "ningyang",
-        rank: "F",
-        firstChar: "N"
-      },
-      {
-        id: 820,
-        name: "宁津",
-        pinyin: "ningjinnj",
-        acronym: "ningjinnj",
-        rank: "F",
-        firstChar: "N"
-      },
+
       {
         id: 830,
         name: "单县",
@@ -628,38 +735,7 @@ export default {
         rank: "F",
         firstChar: "S"
       },
-      {
-        id: 834,
-        name: "邹城",
-        pinyin: "zoucheng",
-        acronym: "zoucheng",
-        rank: "E",
-        firstChar: "Z"
-      },
-      {
-        id: 846,
-        name: "牟平",
-        pinyin: "muping",
-        acronym: "muping",
-        rank: "F",
-        firstChar: "M"
-      },
-      {
-        id: 852,
-        name: "博兴",
-        pinyin: "boxing",
-        acronym: "boxing",
-        rank: "F",
-        firstChar: "B"
-      },
-      {
-        id: 877,
-        name: "茌平",
-        pinyin: "chiping",
-        acronym: "chiping",
-        rank: "F",
-        firstChar: "C"
-      },
+
       {
         id: 878,
         name: "阳谷",
@@ -692,14 +768,7 @@ export default {
         rank: "F",
         firstChar: "J"
       },
-      {
-        id: 883,
-        name: "曹县",
-        pinyin: "caoxian",
-        acronym: "caoxian",
-        rank: "F",
-        firstChar: "C"
-      },
+
       {
         id: 884,
         name: "郓城",
@@ -716,14 +785,7 @@ export default {
         rank: "F",
         firstChar: "L"
       },
-      {
-        id: 897,
-        name: "微山",
-        pinyin: "weishan",
-        acronym: "weishan",
-        rank: "F",
-        firstChar: "W"
-      },
+
       {
         id: 898,
         name: "汶上",
@@ -844,14 +906,7 @@ export default {
         rank: "F",
         firstChar: "Y"
       },
-      {
-        id: 944,
-        name: "蒙阴",
-        pinyin: "mengyin",
-        acronym: "mengyin",
-        rank: "F",
-        firstChar: "M"
-      },
+
       {
         id: 950,
         name: "平邑",
@@ -868,14 +923,7 @@ export default {
         rank: "F",
         firstChar: "L"
       },
-      {
-        id: 952,
-        name: "博山",
-        pinyin: "boshan",
-        acronym: "boshan",
-        rank: "F",
-        firstChar: "B"
-      },
+
       {
         id: 998,
         name: "庆云",
@@ -916,14 +964,7 @@ export default {
         rank: "F",
         firstChar: "P"
       },
-      {
-        id: 1157,
-        name: "长清区",
-        pinyin: "changqingqu",
-        acronym: "changqingqu",
-        rank: "F",
-        firstChar: "C"
-      },
+
       {
         id: 1181,
         name: "鱼台县",
@@ -931,30 +972,6 @@ export default {
         acronym: "yutaixian",
         rank: "F",
         firstChar: "Y"
-      },
-      {
-        id: 1201,
-        name: "成武县",
-        pinyin: "chengwuxian",
-        acronym: "chengwuxian",
-        rank: "F",
-        firstChar: "C"
-      },
-      {
-        id: 1203,
-        name: "东明县",
-        pinyin: "dongmingxian",
-        acronym: "dongmingxian",
-        rank: "F",
-        firstChar: "D"
-      },
-      {
-        id: 1204,
-        name: "定陶区",
-        pinyin: "dingtaoqu",
-        acronym: "dingtaoqu",
-        rank: "F",
-        firstChar: "D"
       }
     ];
     var obj = {};
