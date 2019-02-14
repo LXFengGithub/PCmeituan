@@ -35,4 +35,4 @@ export default {
 
 <style lang="scss">
 @import '@/assets/css/public/layout'
-</style>
+</style>np
