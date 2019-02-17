@@ -15,31 +15,29 @@
       <dd :class="{active: kind == 'travel'}" data-type="travel">品质出游</dd> -->
     </dl>
     <ul class="ibody">
-      <li v-for="(item, index) in all" :key="index" >
+      <li v-for="(item, index) in resultsData[kind]" :key="index" >
         <!-- shadow="never" 组件提供的：有3 个值，这个是让阴影永远不出现-->
         <el-card :body-style="{ padding: '0px' }" shadow="never">
           <img :src="item.image" class="image">
           <div class="cbody">
             <div class="title" :title="item.address">{{item.address}}</div>
             <div class="sub-title" :title="item.subTitle">{{item.subTitle}}</div>
-            <!-- if else 判断 rentNum 的值，进行相应显示的样式-->
-            <div class="price-info"  v-if="item.rentNum">
-              <span class="current-price-wrapper" >
+            <!-- if else 判断 rentNum 的值，进行相应显示的样式 可以添加v-if到 class=price-info的标签里 v-if="item.rentNum" -->
+            <div class="price-info" >
                  <span class="current-price-wrapper">
                     <span class="price-symbol numfont">¥</span>
                     <span class="current-price numfont">{{item.price}}</span>
-                    <span class="units">/人均</span>
+                    <!-- <span class="units">/人均</span> -->
                 </span>
-              </span>
-              <span class="sold bottom-right-info">{{item.title}}</span>
+              <span class="sold bottom-right-info">{{item.address}}</span>
             </div>
-             <div class="price-info"  v-else-if="!item.rentNum">
+             <!-- <div class="price-info"  v-else-if="!item.rentNum">
               <span class="current-price-wrapper" >
                 <span class="price-symbol numfont">¥</span>
                 <span class="current-price numfont" >抢光了</span>
               </span>
               <span class="sold bottom-right-info">{{item.title}}</span>
-            </div>
+            </div> -->
           </div>
         </el-card>
       </li>
@@ -48,43 +46,21 @@
 </template>
 
 <script>
-
+import api from '@/api/index.js'
 export default {
   data: () => ({
     kind: "all",
-    all: [
-      {
-        image:
-          "//p0.meituan.net/wedding/9e7f5991ad660c9e917aa4a01a13274612329.jpg@240w_180h_1e_1c_1l|watermark=1&&r=2&p=9&x=2&y=2&relative=1&o=20|736w_416h_1e_1c",
-        title: "木北造型",
-        address: "崇文门新世界店",
-        subTitle: "木北造型（崇文门新世界店）",
-        price: 398,
-        rentNum: 0
-      },
-      {
-        image:
-        "//p1.meituan.net/deal/88b6436b1ece19805e69849b33b7128c33093.jpg@736w_416h_1e_1c",
-        title: "COSTA COFFEE（东方新天地店）",
-        address: "东方新天地",
-        subTitle: "玫瑰黑巧茶拿铁1份",
-        price: 11,
-        rentNum: 1
-      },
-      {
-        image:
-          "//p1.meituan.net/merchantpic/bace0322a7dbbc1881946020efa9a0bb153834.jpg@240w_180h_1e_1c_1l|watermark=1&&r=2&p=9&x=2&y=2&relative=1&o=20|736w_416h_1e_1c",
-        title: "木北造型",
-        address: "崇文门新世界店",
-        subTitle: "木北造型（崇文门新世界店）",
-        price: 398,
-        rentNum: 1,
-      }
-    ]
+    resultsData:{},
   }),
   props: [
     'nav'
   ],
+  created() {
+    api.getContainer().then(res => {
+      // console.log(res)
+      this.resultsData = res.data.data
+    })
+  },
   methods: {
     mouseMove(e) {
       // console.log(e)

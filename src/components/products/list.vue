@@ -10,60 +10,54 @@
 </template>
 
 <script>
+import api from "@/api/index.js";
 import Item from "./item.vue";
 export default {
   data: () => ({
     nav: [
-      {
-        key: "s-default",
-        name: "智能排序",
-        active: true
-      },
-      {
-        key: "s-price",
-        name: "价格排序",
-        active: false
-      },
-      {
-        key: "s-score",
-        name: "人气最高",
-        active: false
-      },
-      {
-        key: "s-comment",
-        name: "评价最高",
-        active: false
-      }
+      // {
+      //   key: "s-default",
+      //   name: "智能排序",
+      //   active: true
+      // },
+      // {
+      //   key: "s-price",
+      //   name: "价格排序",
+      //   active: false
+      // },
+      // {
+      //   key: "s-score",
+      //   name: "人气最高",
+      //   active: false
+      // },
+      // {
+      //   key: "s-comment",
+      //   name: "评价最高",
+      //   active: false
+      // }
     ],
-    productList: [
-      {
-        image:
-          "https://p0.meituan.net/msmerchant/2188b2d14ca8a229b1bda30242325dca207805.jpg@440w_250h_1e_1c",
-        title: "火鸡老店",
-        type: "food",
-        score: "4.1",
-        commentNum: 1,
-        comment: [
-          {
-            username: "xxxx",
-            evalaute: "好吃"
-          }
-        ],
-        tab: ["火锅", "沙河"],
-        address: "昌平区小汤山尚信村沿温榆河畔北岸向西3．5公里",
-        avgPrice: 64,
-        dealItems: [
-          {
-            title: "火鸡宴，建议10-14人使用",
-            price: 909,
-            counterPrice: 1150,
-            saleNum: 0,
-            priceType: "元"
-          }
-        ]
-      }
-    ]
+    productList: []
   }),
+  created() {
+      this.getNav()
+      this.getProduct()
+      // api.getNav().then(res => {
+      //   this.nav = res.data.data;
+      // });
+      // api.getProductsList().then(res => {
+      //   this.productList = res.data.data;
+      // });
+  },
+  methods: {
+    async getNav() {
+      const { data: {data} } = await api.getNav()
+      this.nav = data
+    },
+    async getProduct() {
+      const { data: {data} } = await api.getProductsList()
+      this.productList = data
+    }
+  },
   components: {
     Item
   }

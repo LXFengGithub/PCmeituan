@@ -30,7 +30,7 @@ export default {
   }),
   created() {
     api.getMunuList().then(res => {
-      console.log(res)
+      // console.log(res)
       this.menuList = res.data.data
     })
   },

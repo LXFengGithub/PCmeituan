@@ -8,6 +8,7 @@
       :showWrapperActive="provinceActive"
       @change_active="changeProvinceActive"
       @change="changeProvince"
+      className="province"
     />
 
     <m-select
@@ -17,6 +18,8 @@
       :showWrapperActive="cityActive"
       @change_active="changeCityActive"
       @change="changeCity"
+      :disabled="cityDisabled"
+      className="city"
     />
 
     <span>直接搜索：
@@ -32,76 +35,29 @@
 
 <script>
 import MSelect from "./select.vue";
+import api from '@/api/index.js'
 
 export default {
   data: () => ({
-    provinceList: {
-      0: [
-        "山东",
-        "甘肃",
-        "江苏",
-        "北京",
-        "云南",
-        "海南",
-        "浙江",
-        "上海",
-        "天津",
-        "陕西",
-        "新疆",
-        "贵州"
-      ],
-      1: [
-        "安徽",
-        "澳门",
-        "湖南",
-        "河北",
-        "香港",
-        "辽宁",
-        "四川",
-        "宁夏",
-        "吉林",
-        "福建",
-        "湖北",
-        "广东"
-      ],
-      2: [
-        "重庆",
-        "山西",
-        "江西",
-        "黑龙江",
-        "青海",
-        "河南",
-        "台湾",
-        "内蒙",
-        "西藏",
-        "广西"
-      ]
-    },
+    provinceList: [],
     province: "省份",
     provinceActive: false,
-    cityList: {
-      0: [
-        "青岛",
-        "淄博",
-        "济南",
-        "烟台",
-        "枣庄",
-        "东营",
-        "潍坊",
-        "济宁",
-        "泰安",
-        "威海",
-        "日照",
-        "莱芜"
-      ]
-    },
+    cityList: [],
     city: "城市",
     cityActive: false,
     restaurants: [],
     state4: "",
-
-    timeout: null
+    timeout: null,
+    cityDisabled: true
   }),
+  created() {
+     api.getProvince().then(res => {
+      this.provinceList = res.data.data.map(item => {
+        item.name = item.provinceName 
+        return item
+      })
+    })
+  },
   components: {
     MSelect
   },
@@ -121,10 +77,14 @@ export default {
       }
     },
     changeProvince(item) {
-      this.province = item
+      this.province = item.name
+      this.cityDisabled = false 
+      this.cityList = item.cityInfoList
     },
     changeCity(item) {
-      this.city = item
+      this.city = item.name
+      this.$store.dispatch('setPosition', item)
+      this.$router.push({name: 'index'})  // 切换城市完成后跳转路由
     },
 
     loadAll() {  /* 请求后台接口数据放这里 */
@@ -135,6 +95,7 @@ export default {
           { "value": "南京"}
       ];
     },
+    // 直接搜索框样式 
     querySearchAsync(queryString, cb) {
       var restaurants = this.restaurants;
       var results = queryString

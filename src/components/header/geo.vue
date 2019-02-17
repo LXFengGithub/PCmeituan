@@ -2,13 +2,11 @@
   <div class="m-geo">
     <div class="position">
       <i class="el-icon-location"/>
-      北京
+      {{$store.state.position.name}}
       <!-- 小常识： 可以给路由起名叫  changeCity -->
       <router-link class="changeCity" :to="{name: 'changeCity'}">切换城市</router-link>
       [
-      <a href="#">大厂回族自治县</a>
-      <a href="#">廊坊</a>
-      <a href="#">固安县</a>
+      <a href="#" v-for="item in nearCity" :key="item.id">{{item.name}}</a>
       ]
     </div>
 
@@ -18,3 +16,27 @@
     </div>
   </div>
 </template>
+
+<script>
+import api from '@/api/index.js'
+export default {
+  data() {
+    return {
+      nearCity: [],
+    }
+  },
+   watch: {
+    "$store.state.position": function() { // 监听"$store.state.position"的 变化 让nearcity 也跟着变化
+      this.nearCity = this.$store.state.position.nearCity
+    }
+  },
+  created() {
+    api.getCurPosition().then(res => {
+      // console.log(res)
+      this.$store.dispatch('setPosition', res.data.data)  // 进入页面初始化-切换城市
+      this.nearCity = res.data.data.nearCity  
+    })
+  },
+ 
+}
+</script>

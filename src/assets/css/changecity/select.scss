@@ -1,5 +1,9 @@
 .choose-wrap {
     display: inline-block;
+    &.disabled {
+      cursor: not-allowed;
+      // pointer-events: none;   //写这句只是让其变成鼠标 不写这句，样式就没有想过。目前还没有解决 样式显示不是禁用  
+    }
     >.choose{
         cursor: pointer;
         border-radius: 4px;
@@ -60,6 +64,10 @@
               border-bottom: 6px solid #E5E5E5;
           }
           .wrapper {
+           
+            &.city {
+              width: 665px
+            }
             &::after{
               content: " ";
               visibility: hidden;
@@ -67,7 +75,9 @@
               height: 0;
               clear: both;
             }
+            
             .col {
+             
               float: left;
                .mt-item {
                 cursor: pointer;
