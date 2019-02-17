@@ -4,7 +4,7 @@
         <dt>全部分类</dt>
         <dd v-for="(item, index) in menuList" :key="index" @mouseenter="menuEnter(item)">
           <i :class="item.type"></i> 
-          {{item.title}} 
+          {{item.name}} 
           <span class="arrow"></span>
         </dd>
       </dl>
@@ -12,61 +12,28 @@
         <!-- template 里面不能写key值，可以把key保存在 h4标签里 
           curDetail 就是鼠标移到那就显示谁的子元素。
         -->
-        <template v-for="(item, index) in curDetail.children">
+        <template v-for="(item, index) in curDetail.items">
           <h4 :key="index">{{item.title}}</h4>
-          <span v-for="(v, i) in item.children" :key="(v + '_' + i)">{{v}}</span>
+          <span v-for="(v, i) in item.items" :key="(v + '_' + i)">{{v}}</span>
         </template>
       </div>
   </div>
 </template>
 
 <script>
+import api from '@/api/index.js'
 export default {
   data: () => ({
     timer: null,
     curDetail: null,
-    menuList: [
-      {
-      "title": "美食",
-        "type": "food",
-        "children": [{
-            "title": "美食1",
-            "children": ["日本菜", "甜点饮品", "火锅自助餐", "小吃快餐", "日韩料理", "西餐", "聚餐宴请"]
-        }]
-    },
-    {
-      "title": "美食",
-        "type": "food",
-        "children": [{
-            "title": "美食2",
-            "children": ["日本菜", "甜点饮品", "火锅自助餐", "小吃快餐", "日韩料理", "西餐", "聚餐宴请"]
-        }]
-    },
-    {
-      "title": "美食",
-        "type": "food",
-        "children": [{
-            "title": "美食3",
-            "children": ["日本菜", "甜点饮品", "火锅自助餐", "小吃快餐", "日韩料理", "西餐", "聚餐宴请"]
-        }]
-    },
-    {
-      "title": "美食",
-        "type": "food",
-        "children": [{
-            "title": "美食4",
-            "children": ["日本菜", "甜点饮品", "火锅自助餐", "小吃快餐", "日韩料理", "西餐", "聚餐宴请"]
-        }]
-    },
-    {
-      "title": "美食",
-        "type": "food",
-        "children": [{
-            "title": "美食5",
-            "children": ["日本菜", "甜点饮品", "火锅自助餐", "小吃快餐", "日韩料理", "西餐", "聚餐宴请"]
-        }]
-    }]
+    menuList: []
   }),
+  created() {
+    api.getMunuList().then(res => {
+      console.log(res)
+      this.menuList = res.data.data
+    })
+  },
   methods: {
     // musemove mouseout  冒泡  mouseenter mouseleven   不冒泡
     // 处理二级导航 显示/隐藏

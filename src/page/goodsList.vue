@@ -1,17 +1,39 @@
 <template>
-  <div class="doogs">
-    goodsList 
+  <div class="page-product">
+    <div>
+      <el-row class="m-crumbs">
+        <Crumb />
+      </el-row>
+      <el-row>
+        <el-col :span="19">
+          <el-row>  
+            <Categroy />
+          </el-row>
+          <el-row>
+            <List />
+          </el-row>
+        </el-col>
+        <el-col :span="5">map + fav</el-col>
+      </el-row>
+    </div>
   </div>
 </template>
 
 <script>
-export default {
-  data: () => ({
+import Crumb from '@/components/products/crumb'
+import Categroy from '@/components/products/categroy'
+import List from '@/components/products/list'
 
-    })
-};
+export default {
+  data: () => ({}),
+  components:{
+    Crumb,
+    Categroy,
+    List
+  }
+}
 </script>
 
-<style  scoped>
-
+<style  lang="scss">
+@import '@/assets/css/products/index.scss';
 </style>

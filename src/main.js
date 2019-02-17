@@ -5,8 +5,8 @@ import App from './App'
 import router from './router'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
-// 引入公共css样式 main.css
-import '@/assets/css/main'
+import '@/assets/css/main'  // 引入公共css样式 main.css
+import store from './store.js'
 
 Vue.use(ElementUI)
 Vue.config.productionTip = false
@@ -27,6 +27,7 @@ Vue.directive('documentClick', { /* 点击该 dom元素，以外的位置就转�
 new Vue({
   el: '#app',
   router,
+  store,
   components: {
     App
   },

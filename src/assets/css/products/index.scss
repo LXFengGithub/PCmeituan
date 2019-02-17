@@ -250,13 +250,14 @@
     .m-product-select {
       padding-bottom: 5px;
       min-width: 120px;
-
       .tab {
         position: relative;
-
+        color: #666;
+        font-weight: 400;
         dt {
           font-size: 14px;
           line-height: 24px;
+          
           &.select-title {
             color: #ccc;
           }
