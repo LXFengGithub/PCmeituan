@@ -15,47 +15,41 @@ import Item from "./item.vue";
 export default {
   data: () => ({
     nav: [
-      // {
-      //   key: "s-default",
-      //   name: "智能排序",
-      //   active: true
-      // },
-      // {
-      //   key: "s-price",
-      //   name: "价格排序",
-      //   active: false
-      // },
-      // {
-      //   key: "s-score",
-      //   name: "人气最高",
-      //   active: false
-      // },
-      // {
-      //   key: "s-comment",
-      //   name: "评价最高",
-      //   active: false
-      // }
+      {
+        key: "s-default",
+        name: "智能排序",
+        active: true
+      },
+      {
+        key: "s-price",
+        name: "价格排序",
+        active: false
+      },
+      {
+        key: "s-score",
+        name: "人气最高",
+        active: false
+      },
+      {
+        key: "s-comment",
+        name: "评价最高",
+        active: false
+      }
     ],
     productList: []
   }),
   created() {
-      this.getNav()
       this.getProduct()
-      // api.getNav().then(res => {
-      //   this.nav = res.data.data;
-      // });
       // api.getProductsList().then(res => {
       //   this.productList = res.data.data;
       // });
   },
   methods: {
-    async getNav() {
-      const { data: {data} } = await api.getNav()
-      this.nav = data
-    },
+    
     async getProduct() {
       const { data: {data} } = await api.getProductsList()
       this.productList = data
+      console.log(this.productList)
     }
   },
   components: {

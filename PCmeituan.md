@@ -52,3 +52,6 @@ element-ui里面没有2级联动，就自己封装了一个。
     console.log(obj); // 打印是获取的每一个对象
     this.cityGroup = obj;  // 把obj保存到data钩子函数中的cityGroup。
     ```
+###3、产品列表页
+
+###4、接口串联
