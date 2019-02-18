@@ -30,23 +30,24 @@ _src
   |__assets
     |__css    scss文件集
   |__components   组件集
-    |__changeCity   选择城市
-      |__category.vue  
-      |__goodsList.vue
-      |__index.vue
+    |__changeCity   切换城市
+      |__category.vue   首字母选择，瞄点跳转
+      |__hot.vue    热门城市，最近访问；共用组件
+      |__province.vue   按省份选择，二级下拉组件
+      |__select.vue   分装的下拉组件
     |__footer   页脚
       |__index.vue
     |__header   头部
-      |__geo.vue
-      |__index.vue
-      |__nav.vue
-      |__searchBar.vue
-      |__topBar.vue
-    |__index    轮播图部分
-      |__container.vue
-      |__life.vue
-      |__menu.vue
-      |__slider.vue
+      |__geo.vue    左侧nav
+      |__index.vue    
+      |__nav.vue    右侧nav
+      |__searchBar.vue    搜索栏
+      |__topBar.vue   最顶部nav
+    |__index
+      |__container.vue    选项卡，列表部分
+      |__life.vue   右边，个人信息等
+      |__menu.vue   左边，二级导航
+      |__slider.vue   轮播图
     |__products   产品列表页
       |__category.vue   分类、区域部分，导航菜单
       |__crumb.vue    面包屑导航
@@ -54,10 +55,11 @@ _src
       |__list.vue   内容区-列表
       |__select.vue
   |__layout
+    |__default.vue    默认页面，首页
   |__page   
-    |__changeCiyu.vue
-    |__goodsList.vue
-    |__index.vue
+    |__changeCiyu.vue   切换城市页
+    |__goodsList.vue    列表页
+    |__index.vue    首页内容区
   |__router   路由集合
     |__index.js
   |__app.vue    
