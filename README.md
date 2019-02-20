@@ -33,8 +33,8 @@ _src
     |__changeCity   切换城市
       |__category.vue   首字母选择，瞄点跳转
       |__hot.vue    热门城市，最近访问；共用组件
-      |__province.vue   按省份选择，二级下拉组件
-      |__select.vue   分装的下拉组件
+      |__province.vue   按省份选择，二级联动
+      |__select.vue   分装的二级联动 下拉组件
     |__footer   页脚
       |__index.vue
     |__header   头部
