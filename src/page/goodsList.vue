@@ -21,7 +21,7 @@
 
 <script>
 import Crumb from '@/components/products/crumb'
-import Categroy from '@/components/products/categroy'
+import Categroy from '@/components/products/category'
 import List from '@/components/products/list'
 
 export default {
