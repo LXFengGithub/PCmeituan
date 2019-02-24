@@ -35,9 +35,11 @@ export default new Router({
       path: '/blank',
       name: 'blankPage',
       component: BlankPage
-    }, {
+    }
+    , 
+    {
       path: '**', /* 错误路由，重定向。防止使用 history模式刷新报错 */
-      redirect: '/index'
+      redirect: '/index.html'
     }
   ]
 })
